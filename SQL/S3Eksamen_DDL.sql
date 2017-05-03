@@ -144,6 +144,6 @@ exec CreateAgent 'Joachim C. Madsen', 'DNK', '240967-3425'
 exec CreateAddress 9, 1634, 'Langegade 57'
 
 
-exec CreateReport 'Lorem Ipsum', CONVERT(DATETIME, GETDATE), GETDATE(), '', 1, 4, ''
-exec CreateReport 'Lorem Ipsum', GETDATE(), GETDATE(), '', 7, 5, ''
-exec CreateReport 'Lorem Ipsum', GETDATE(), GETDATE(), '', 9, 6, ''
+exec CreateReport 'Lorem Ipsum', '01-05-2017', '01-05-2017', '', 1, 4, ''
+exec CreateReport 'Lorem Ipsum', '01-05-2017', '01-05-2017', '', 7, 5, ''
+exec CreateReport 'Lorem Ipsum', '01-05-2017', '01-05-2017', '', 9, 6, ''
