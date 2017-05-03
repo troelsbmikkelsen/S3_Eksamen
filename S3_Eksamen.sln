@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PETClient", "PETClient\PETClient.csproj", "{A0A78F33-37C4-4064-9FA0-4E10CB7FD566}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Database", "Database\Database.csproj", "{ECB9E378-AC27-4678-A2A3-DC2BC29BC102}"
+EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "UML", "Diagrammer\UML\UML.modelproj", "{A935842D-68A3-4691-8DE5-FE90E68EA0D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseTest", "DatabaseTest\DatabaseTest.csproj", "{7F3BE9A0-7ACF-47F4-A5B7-522ECD6ACEFD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A0A78F33-37C4-4064-9FA0-4E10CB7FD566}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0A78F33-37C4-4064-9FA0-4E10CB7FD566}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0A78F33-37C4-4064-9FA0-4E10CB7FD566}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0A78F33-37C4-4064-9FA0-4E10CB7FD566}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECB9E378-AC27-4678-A2A3-DC2BC29BC102}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECB9E378-AC27-4678-A2A3-DC2BC29BC102}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECB9E378-AC27-4678-A2A3-DC2BC29BC102}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECB9E378-AC27-4678-A2A3-DC2BC29BC102}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A935842D-68A3-4691-8DE5-FE90E68EA0D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A935842D-68A3-4691-8DE5-FE90E68EA0D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A935842D-68A3-4691-8DE5-FE90E68EA0D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A935842D-68A3-4691-8DE5-FE90E68EA0D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F3BE9A0-7ACF-47F4-A5B7-522ECD6ACEFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F3BE9A0-7ACF-47F4-A5B7-522ECD6ACEFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F3BE9A0-7ACF-47F4-A5B7-522ECD6ACEFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F3BE9A0-7ACF-47F4-A5B7-522ECD6ACEFD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,333 @@
+﻿<Window x:Class="PETClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PETClient"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="800">
+    <Grid>
+        <TabControl>
+            <TabItem Header="Informanter">
+                <Grid>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="3*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Grid.Column="0">
+                        <Button Name="btnGetAllInformers" Content="Hent alle informanter" Margin="0 5" Click="btnGetAllInformers_Click"></Button>
+                        <Button Name="btnCreateInformer" Content="Opret ny informant" Margin="0 5" Click="btnCreateInformer_Click"></Button>
+                        <Button Name="btnSaveInformer" Content="Gem informant" Margin="0 5" Click="btnSaveInformer_Click"></Button>
+                        <Button Name="btnDeleteInformer" Content="Slet informant" Margin="0 5" Click="btnDeleteInformer_Click"></Button>
+                        <ListBox Name="lstInformers" Height="410" Margin="0 5" SelectionChanged="lstInformers_SelectionChanged"></ListBox>
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="1">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <!-- Base info -->
+                            <StackPanel Grid.Column="0" Grid.Row="0" Height="250">
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 4">
+                                    <Label Content="Id"/>
+                                    <TextBox Name="txtInformerId" Width="210" IsEnabled="False"/>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 4">
+                                    <Label Content="Navn"/>
+                                    <TextBox Name="txtInformerName" Width="210"/>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 4">
+                                    <Label Content="Nationalitet"/>
+                                    <TextBox Name="txtInformerNationality" Width="210"/>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 4">
+                                    <Label Content="CPR"/>
+                                    <TextBox Name="txtInformerCPR" Width="210"/>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 4">
+                                    <Label Content="Valuta"/>
+                                    <TextBox Name="txtInformerCurrency" Width="210"/>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 4">
+                                    <Label Content="Betalingsform"/>
+                                    <TextBox Name="txtInformerPaymentType" Width="210"/>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 4">
+                                    <Label Content="Tags"/>
+                                    <TextBox Name="txtInformerTags" Width="210"/>
+                                </StackPanel>
+
+
+                            </StackPanel>
+
+                            <!-- Address info -->
+                            <StackPanel Grid.Column="1" Grid.Row="0" Height="250">
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 4">
+                                    <Label Content="Vej"/>
+                                    <TextBox Name="txtInformerStreet" Width="210"/>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 4">
+                                    <Label Content="Postnr"/>
+                                    <TextBox Name="txtInformerAreacode" Width="210"/>
+                                </StackPanel>
+
+                            </StackPanel>
+
+                            <!-- Appearance info -->
+                            <StackPanel Grid.Column="0" Grid.Row="1">
+                                <Separator></Separator>
+
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 4">
+                                    <Label Content="Højde"/>
+                                    <TextBox Name="txtInformerHeight" Width="210"/>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 4">
+                                    <Label Content="Øjenfarve"/>
+                                    <TextBox Name="txtInformerEyecolor" Width="210"/>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 4">
+                                    <Label Content="Hårfarve"/>
+                                    <TextBox Name="txtInformerHaircolor" Width="210"/>
+                                </StackPanel>
+                            </StackPanel>
+
+                            <!-- Image -->
+                            <StackPanel Grid.Column="1" Grid.Row="1">
+                                <Separator></Separator>
+
+                                <Image Name="imgInformer" Width="256" MaxWidth="256" Height="256" MaxHeight="256"/>
+                                <Button Name="btnInformerChooseImage" Content="Vælg billede ..." Click="btnInformerChooseImage_Click"/>
+                                <TextBox Name="txtInformerImagePath"></TextBox>
+                            </StackPanel>
+                        </Grid>
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Observanter">
+                <Grid>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="3*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Grid.Column="0">
+                        <Button Name="btnGetAllObserved" Content="Hent alle observanter" Margin="0 5" Click="btnGetAllObserved_Click"></Button>
+                        <Button Name="btnCreateObserved" Content="Opret ny observant" Margin="0 5" Click="btnCreateObserved_Click"></Button>
+                        <Button Name="btnSaveObserved" Content="Gem observant" Margin="0 5" Click="btnSaveObserved_Click"></Button>
+                        <Button Name="btnDeleteObserved" Content="Slet informant" Margin="0 5" Click="btnDeleteObserved_Click"></Button>
+                        <ListBox Name="lstObserved" Height="410" Margin="0 5" SelectionChanged="lstObserved_SelectionChanged" MouseDoubleClick="lstObserved_MouseDoubleClick"></ListBox>
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="1">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <!-- Base info -->
+                            <StackPanel Grid.Column="0" Grid.Row="0" Height="250">
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 4">
+                                    <Label Content="Id"/>
+                                    <TextBox Name="txtObservedId" Width="210" IsEnabled="False"/>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 4">
+                                    <Label Content="Navn"/>
+                                    <TextBox Name="txtObservedName" Width="210"/>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 4">
+                                    <Label Content="Nationalitet"/>
+                                    <TextBox Name="txtObservedNationality" Width="210"/>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 4">
+                                    <Label Content="CPR"/>
+                                    <TextBox Name="txtObservedCPR" Width="210"/>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 4">
+                                    <Label Content="Tags"/>
+                                    <TextBox Name="txtObservedTags" Width="210"/>
+                                </StackPanel>
+
+
+                            </StackPanel>
+
+                            <!-- Address info -->
+                            <StackPanel Grid.Column="1" Grid.Row="0" Height="250">
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 4">
+                                    <Label Content="Vej"/>
+                                    <TextBox Name="txtObservedStreet" Width="210"/>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 4">
+                                    <Label Content="Postnr"/>
+                                    <TextBox Name="txtObservedAreacode" Width="210"/>
+                                </StackPanel>
+
+                            </StackPanel>
+
+                            <!-- Appearance info -->
+                            <StackPanel Grid.Column="0" Grid.Row="1">
+                                <Separator></Separator>
+
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 4">
+                                    <Label Content="Højde"/>
+                                    <TextBox Name="txtObservedHeight" Width="210"/>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 4">
+                                    <Label Content="Øjenfarve"/>
+                                    <TextBox Name="txtObservedEyecolor" Width="210"/>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 4">
+                                    <Label Content="Hårfarve"/>
+                                    <TextBox Name="txtObservedHaircolor" Width="210"/>
+                                </StackPanel>
+                            </StackPanel>
+
+                            <!-- Image -->
+                            <StackPanel Grid.Column="1" Grid.Row="1">
+                                <Separator></Separator>
+
+                                <Image Name="imgObserved" Width="256" MaxWidth="256" Height="256" MaxHeight="256"/>
+                                <Button Name="btnObservedChooseImage" Content="Vælg billede ..."/>
+                                <TextBox Name="txtObservedImagePath"></TextBox>
+                            </StackPanel>
+                        </Grid>
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Agenter">
+                <Grid>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="3*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Grid.Column="0">
+                        <Button Name="btnGetAllAgents" Content="Hent alle agenter" Margin="0 5" Click="btnGetAllAgents_Click"></Button>
+                        <Button Name="btnCreateAgent" Content="Opret ny agent" Margin="0 5" Click="btnCreateAgent_Click"></Button>
+                        <Button Name="btnSaveAgent" Content="Gem agent" Margin="0 5" Click="btnSaveAgent_Click"></Button>
+                        <Button Name="btnDeleteAgent" Content="Slet informant" Margin="0 5" Click="btnDeleteAgent_Click"></Button>
+                        <ListBox Name="lstAgents" Height="410" Margin="0 5" SelectionChanged="lstAgents_SelectionChanged"></ListBox>
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="1">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <!-- Base info -->
+                            <StackPanel Grid.Column="0" Grid.Row="0" Height="250">
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 4">
+                                    <Label Content="Id"/>
+                                    <TextBox Name="txtAgentId" Width="210" IsEnabled="False"/>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 4">
+                                    <Label Content="Navn"/>
+                                    <TextBox Name="txtAgentName" Width="210"/>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 4">
+                                    <Label Content="Nationalitet"/>
+                                    <TextBox Name="txtAgentNationality" Width="210"/>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 4">
+                                    <Label Content="CPR"/>
+                                    <TextBox Name="txtAgentCPR" Width="210"/>
+                                </StackPanel>
+
+                            </StackPanel>
+
+                            <!-- Address info -->
+                            <StackPanel Grid.Column="1" Grid.Row="0" Height="250">
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 4">
+                                    <Label Content="Vej"/>
+                                    <TextBox Name="txtAgentStreet" Width="210"/>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 4">
+                                    <Label Content="Postnr"/>
+                                    <TextBox Name="txtAgentAreacode" Width="210"/>
+                                </StackPanel>
+
+                            </StackPanel>
+
+                            <!-- Appearance info -->
+                            <StackPanel Grid.Column="0" Grid.Row="1">
+                                <Separator></Separator>
+
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 4">
+                                    <Label Content="Højde"/>
+                                    <TextBox Name="txtAgentHeight" Width="210"/>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 4">
+                                    <Label Content="Øjenfarve"/>
+                                    <TextBox Name="txtAgentEyecolor" Width="210"/>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 4">
+                                    <Label Content="Hårfarve"/>
+                                    <TextBox Name="txtAgentHaircolor" Width="210"/>
+                                </StackPanel>
+                            </StackPanel>
+
+                            <!-- Image -->
+                            <StackPanel Grid.Column="1" Grid.Row="1">
+                                <Separator></Separator>
+
+                                <Image Name="imgAgent" Width="256" MaxWidth="256" Height="256" MaxHeight="256"/>
+                                <Button Name="btnAgentChooseImage" Content="Vælg billede ..."/>
+                                <TextBox Name="txtAgentImagePath"></TextBox>
+                            </StackPanel>
+                        </Grid>
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+
+        </TabControl>
+    </Grid>
+    
+</Window>

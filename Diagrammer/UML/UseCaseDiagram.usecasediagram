@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="9dd8ebd5-2e2c-4fdf-9476-a690a97eedef" name="UseCaseDiagram" linkedPackageId="ff8c27c5-d53c-42b9-8f3e-1dbd4a5ccc59" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="de677b82-092d-4ef9-81d3-d7513cb544ea">
+      <profileInstance Id="894c7fa2-3160-4bc1-a4e0-7a101b883439" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="52fba5e6-6add-444b-ad47-ad3cde04ec18">
+      <profileInstance Id="0f7e0518-f384-44c3-9d19-a64bc2553f81" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="e8ea209b-63ef-4c82-909f-8ad2672db126" name="Agent1" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="765b2abe-11cb-44df-b81f-e7e8da20ad3e" />
+        <targetEnds>
+          <association Id="4b512ac2-591e-4780-806d-9b81978d9438" isDerived="false" sourceEndRoleName="Agent" targetEndRoleName="Opret person" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="797d1d76-39fa-4c35-9681-d7af9d7258ab" LastKnownName="Opret person" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0a665f10-7703-4364-86a4-41159756b20a" name="Agent" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="67966114-68ad-417f-adf2-2ccecffb092f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9e6fd6b8-846b-4745-ba90-de305d6645a0" name="Opret person" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="43d30c3c-ba23-4940-8765-ae1cb2ef2031" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="96efbe18-dc7c-4c07-8d7a-61b7172aa024" />
+          </association>
+          <association Id="d81e27b6-de1a-4a9b-924a-f0dbf79a90a7" isDerived="false" sourceEndRoleName="Agent" targetEndRoleName="Ajourfør person" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="5d83023b-d8f4-4d27-928e-eaa10279bc38" LastKnownName="Ajourfør person" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="04a13a16-2c4f-43cd-9c7a-574efba12a11" name="Agent" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="56c0dfc6-928b-47cc-ac86-fc916776356a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e78e9c20-2c8c-4a51-ae4b-3f5b99825a0d" name="Ajourfør person" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="eb8bcb6e-f2ff-49b0-9d7d-36fe0319f201" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f1825182-fc3b-4c26-92d5-d0f78bfa534f" />
+          </association>
+          <association Id="478ea9c3-4833-4592-93c5-fec3170b8892" isDerived="false" sourceEndRoleName="Agent" targetEndRoleName="Slet person" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="cb1a3a4a-5d49-4f83-912f-f574e93b815d" LastKnownName="Slet person" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="eb3235d1-e36b-41ce-b28b-01b445e3467b" name="Agent" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="47882eda-df02-47ac-a677-f78b63660866" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9910b195-af6d-4206-ab15-c6adf5611dec" name="Slet person" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="00fd8159-cf3a-4cd3-9919-d1becb787a70" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="fbb54c11-af63-416c-8d8e-e5a87bb744df" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="88c84e08-e73d-43bb-a76b-12125b1b7201" name="person" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <ownedCommentsInternal>
+          <comment Id="8901423b-15c2-4219-b15c-5435b8b8e088">
+            <elementDefinition Id="78fd28da-c2b7-4317-8c0c-805bebe0d7b9" />
+            <body>1. Vælg persontype
+2. Indtast oplysninger
+3. Gem person</body>
+            <annotatedElements>
+              <useCaseMoniker Id="797d1d76-39fa-4c35-9681-d7af9d7258ab" LastKnownName="Opret person" />
+            </annotatedElements>
+          </comment>
+          <comment Id="aff4185d-0b95-4267-89cb-c75e675d0fc4">
+            <elementDefinition Id="a434cd93-7a37-4b6e-a248-cf19458433cc" />
+            <body>1. Vælg person
+2. Ændre oplysninger
+3. Gem person</body>
+            <annotatedElements>
+              <useCaseMoniker Id="5d83023b-d8f4-4d27-928e-eaa10279bc38" LastKnownName="Ajourfør person" />
+            </annotatedElements>
+          </comment>
+          <comment Id="2e911fd7-3af0-4636-b804-67bc00ad54cf">
+            <elementDefinition Id="bb0fae5d-8e75-4f4a-b9d0-4f3daa01961a" />
+            <body>1. Vælg person
+2. Slet person</body>
+            <annotatedElements>
+              <useCaseMoniker Id="cb1a3a4a-5d49-4f83-912f-f574e93b815d" LastKnownName="Slet person" />
+            </annotatedElements>
+          </comment>
+        </ownedCommentsInternal>
+        <elementDefinition Id="d3e0cf9e-dbaa-445b-8403-85ffb093feab" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="797d1d76-39fa-4c35-9681-d7af9d7258ab" name="Opret person" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="40a58d5e-28ea-4d7a-b214-f2f1ad78558c" />
+        <subjects>
+          <subsystemMoniker Id="88c84e08-e73d-43bb-a76b-12125b1b7201" LastKnownName="person" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="5d83023b-d8f4-4d27-928e-eaa10279bc38" name="Ajourfør person" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1957e51e-493f-4b53-9ff4-a290c8818607" />
+        <subjects>
+          <subsystemMoniker Id="88c84e08-e73d-43bb-a76b-12125b1b7201" LastKnownName="person" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="cb1a3a4a-5d49-4f83-912f-f574e93b815d" name="Slet person" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="457df3f3-e930-4fa9-abdf-b22aa37ec79c" />
+        <subjects>
+          <subsystemMoniker Id="88c84e08-e73d-43bb-a76b-12125b1b7201" LastKnownName="person" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="ff8c27c5-d53c-42b9-8f3e-1dbd4a5ccc59" name="UML">
+    <elementDefinition Id="9cb84623-f1b1-4cdb-8a42-fedf5fe20484" />
+  </package>
+</useCaseModelRoot>
