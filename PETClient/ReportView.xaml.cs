@@ -19,6 +19,9 @@ namespace PETClient {
     /// Interaction logic for ReportView.xaml
     /// </summary>
     public partial class ReportView : Window {
+        List<Person> authorlist = new List<Person>();
+        List<Observed> observedlist = new List<Observed>();
+
         public ReportView(int id) {
             InitializeComponent();
 
@@ -28,9 +31,22 @@ namespace PETClient {
                 lstReports.ItemsSource = list;
             }
 
-            var agentlist = AgentWrapper.GetAllAgents().Select(x => x.GetPerson());
-            var informerlist = InformerWrapper.GetAllInformers().Select(x => x.GetPerson());
-            cmbAuthor.ItemsSource = agentlist.Concat(informerlist);
+            var agentlist = AgentWrapper.GetAllAgents();
+            var informerlist = InformerWrapper.GetAllInformers();
+
+            foreach (var i in agentlist) {
+                authorlist.Add(new Person(i.Id, "", "", i.Name));
+            }
+
+            foreach (var i in informerlist) {
+                authorlist.Add(new Person(i.Id, "", "", i.Name));
+            }
+            
+            cmbAuthor.ItemsSource = authorlist;
+
+            observedlist = ObservedWrapper.GetAllObserved();
+
+            cmbObserved.ItemsSource = observedlist;
             
         }
 
@@ -51,17 +67,30 @@ namespace PETClient {
                 txtPlace.Text = report.Place;
 
                 // author
+                cmbAuthor.SelectedIndex = authorlist.IndexOf(authorlist.Where(x => x.Id == report.Author_Id).First());
 
                 // observed
+                cmbObserved.SelectedIndex = observedlist.IndexOf(observedlist.Where(x => x.Id == report.Observed_Id).First());
 
                 // content
+                txtContent.Text = report.Content;
 
                 // comment
+                txtComment.Text = report.Comment;
 
             }
         }
 
         private void btnCreateReport_Click(object sender, RoutedEventArgs e) {
+            lstReports.SelectedIndex = -1;
+
+            txtId.Text = (-1).ToString();
+            dtCreate.SelectedDate = DateTime.Now;
+            dtChange.SelectedDate = DateTime.Now;
+            txtPlace.Text = "";
+            cmbAuthor.SelectedIndex = -1;
+            txtContent.Text = "";
+            txtComment.Text = "";
 
         }
 

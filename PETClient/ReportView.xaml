@@ -46,7 +46,7 @@
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                 <Label Content="Observant"></Label>
-                <ComboBox Name="cmbObserved" Width="300"></ComboBox>
+                <ComboBox Name="cmbObserved" Width="300" IsEnabled="False"></ComboBox>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
